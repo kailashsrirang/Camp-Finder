@@ -1,0 +1,17 @@
+<% layout('layout/boilerplate') %>
+    <h1>All Camgrounds</h1>
+    <a href="/campgrounds">Back</a>
+    <a href="/campgrounds/new">Create New Campground</a>
+
+    <ul>
+        <% for (let campground of campgrounds){ %>
+            <li>
+
+                <a href="/campgrounds/<%=campground._id%>">
+                    <%= campground.title %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+
+    <!-- this whole this will be pases to the boilplate.ejs file as the variable called body -->
